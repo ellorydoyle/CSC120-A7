@@ -109,17 +109,7 @@ public class Cafe extends Building{
         if (this.activeFloor == -1) {
             throw new RuntimeException("You are not inside this Building. Must call enter() before navigating between floors.");
         }
-        if (floorNum < 1 || floorNum > this.nFloors) {
-            throw new RuntimeException("Invalid floor number. Valid range for this Building is 1-" + this.nFloors +".");
-        }
-        if (this.hasElevator == true) {
-          System.out.println("You ride the elevator to floor #" + floorNum + ".");
-        }
-        if (this.hasElevator == false) {
-          throw new RuntimeException("Since there is no elevator, you must call goUp() or goDown() in order move between floors.");
-        }
-        System.out.println("You are now on floor #" + floorNum + " of " + this.name);
-        this.activeFloor = floorNum;
+        System.out.println("You are not permitted to move floors in this building.");
     }
 
     public void showOptions() {
